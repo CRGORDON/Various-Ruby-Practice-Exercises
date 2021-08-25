@@ -1,0 +1,12 @@
+#fibonacci number generator
+
+number1 = 0
+number2 = 1
+fibo = 1
+
+10.times do
+  puts fibo
+  fibo = number1 + number2
+  number1 = number2
+  number2 = fibo
+end
