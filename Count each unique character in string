@@ -1,0 +1,13 @@
+#takes a string and provides the count of each unique character in hash form.
+
+puts "enter a string to tally each unique character within it..."
+string_input = gets.chomp
+  
+uniq_char_count = Hash.new #use this as the container to tally each unique character.
+
+uniq_chars_list = string_input.split("").uniq #create a list of the unique characters in the string, in array form.
+uniq_chars_list.each do |char| #iterate through each unique character in that array that was just made.
+  uniq_char_count[char] = string_input.count(char) #count how many occurences of each unique character there are in the original string, store as a hash.
+end
+
+p uniq_char_count #print the tally.
