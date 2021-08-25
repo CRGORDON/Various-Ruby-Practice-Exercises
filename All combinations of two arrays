@@ -1,0 +1,5 @@
+card_suit = ["Hearts", "Spades", "Clubs", "Diamonds"] #array 1
+cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"] #array2
+
+p cards.product(card_suit).sort
+puts "and there should be 52 cards in a deck, and our combinator has #{cards.product(card_suit).count}" #prove that this made 52 combinations.
