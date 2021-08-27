@@ -1,0 +1,25 @@
+# Height in meters
+towers = [
+  { :name => "Berliner Fernsehturm", :height => 368.0 }, #I think these are in meters
+  { :name => "Canton Tower", :height => 600.0 },
+  { :name => "Eiffel Tower", :height => 324.0 },
+  { :name => "Tokyo Tower", :height => 332.6 },
+  { :name => "Stratosphere Tower", :height => 350.2 }
+]
+
+towers.sort_by! {|element| -element[:height]} #this sorts an array, but then accesses the height symbol in each array element's hash. 
+#The - sign reverses the sort order
+puts towers
+
+#meters to feet: * 3.28084
+
+towers_in_feet = towers.each do |element| #this block looks at each array element, then the value in the hash at each element, and then multiplies by the conversion factor.
+  element[:height] *= 3.28084
+end 
+
+
+puts "and this is the towers, sorted in descending order, and heights converted to feet:"
+
+towers_in_feet.each do |element|
+  puts "The #{element[:name]} is #{element[:height]} tall"
+end
